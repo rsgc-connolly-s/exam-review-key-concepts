@@ -29,7 +29,31 @@ canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 
 //Make blur effect 
 
-for x in stride(from: <#T##T#>, through: <#T##T#>, by: <#T##T.Stride#>)
+for x in stride(from: -50, through: 340, by: 5){
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 120)
+    canvas.drawText(message: "blur", size: 175, x: 25, y: x, kerning: 10)
+}
+
+//Draw the blur 
+canvas.textColor = Color.black
+canvas.drawText(message: "blur", size: 175, x: 25, y: 320, kerning: 10)
+
+
+//left info
+canvas.textColor = Color.black
+canvas.drawText(message: "saturday", size: 10, x: 15, y: 550)
+canvas.drawText(message: "october 16 1993 / 8pm", size: 10, x: 15, y: 535)
+
+
+//middle info
+canvas.drawText(message: "mandela hall", size: 10, x: 150, y: 550)
+canvas.drawText(message: "at university of sussex", size: 10, x: 150, y: 535)
+
+
+//rigth info
+canvas.drawText(message: "special guest", size: 10, x: 280, y: 550)
+canvas.drawText(message: "salad, plus my life story", size: 10, x: 280, y: 535)
+canvas.drawText(message: "€6.50 / €5.50 advance", size: 10, x: 280, y: 505)
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView

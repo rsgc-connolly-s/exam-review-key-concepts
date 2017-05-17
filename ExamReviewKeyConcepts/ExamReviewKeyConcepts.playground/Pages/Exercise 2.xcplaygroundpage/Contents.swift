@@ -23,6 +23,20 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+//Draw Background 
+canvas.fillColor = Color.init(hue: 54, saturation: 8, brightness: 80, alpha: 100)
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+
+//Draw Undertones
+canvas.drawText(message: "undertones", size: 65, x: 15, y: 400,kerning: 2)
+
+//Draw Create Blur
+for x in stride(from: 1, through: -90, by: -3){
+    canvas.rotate(by:x)
+    canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 120)
+    canvas.drawText(message: "undertones", size: 65, x: 15, y: 400,kerning: 2)
+}
+
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

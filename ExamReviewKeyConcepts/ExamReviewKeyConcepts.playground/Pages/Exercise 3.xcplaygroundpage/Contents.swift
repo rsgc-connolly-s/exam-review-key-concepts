@@ -28,54 +28,31 @@ canvas.drawShapesWithBorders = false
 canvas.fillColor = Color.init(hue: 337, saturation: 91, brightness: 100, alpha: 100)
 canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 
-//Draw black rectangles 
+//Set Paramaters 
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 10
-canvas.borderColor = Color.black
 
-    //draw top right
+//Make square function
+func drawSquarePattern(centreX: Int, centreY: Int){
+    canvas.borderColor = Color.black
+
     for x in stride(from: 0, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 0, centreY: 400, width: x, height: x)
+        canvas.drawRectangle(centreX: centreX, centreY: centreY, width: x, height: x)
     }
-
-    //draw bottom right
-    for x in stride(from: 0, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 0, centreY: 0, width: x, height: x)
-    }
-
-    //draw bottom left
-    for x in stride(from: 0, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 400, centreY: 0, width: x, height: x)
-    }
-
-    //draw top left
-    for x in stride(from: 0, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 400, centreY: 400, width: x, height: x)
-    }
-
-//draw white rectangles 
-canvas.borderColor = Color.white
-
-    //draw top right
+    canvas.borderColor = Color.white
     for x in stride(from: 135, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 0, centreY: 400, width: x, height: x)
+      canvas.drawRectangle(centreX: centreX, centreY: centreY, width: x, height: x)
     }
+    
+}
 
-    //draw bottom right
-    for x in stride(from: 135, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 0, centreY: 0, width: x, height: x)
-    }
+//draw functions
+drawSquarePattern(centreX: 400, centreY: 0)
+drawSquarePattern(centreX: 0, centreY: 0)
+drawSquarePattern(centreX: 400, centreY: 400)
+drawSquarePattern(centreX: 0, centreY: 400)
 
-    //draw bottom left
-    for x in stride(from: 135, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 400, centreY: 0, width: x, height: x)
-    }
-
-    //draw top left
-    for x in stride(from: 135, through: 360, by: 90){
-        canvas.drawRectangle(centreX: 400, centreY: 400, width: x, height: x)
-    }
 
 //draw cover up
 canvas.drawShapesWithBorders = false

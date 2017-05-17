@@ -23,6 +23,30 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+//draw background
+canvas.fillColor = Color.black
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+
+//draw circles pattern
+canvas.fillColor = Color.green
+for x in stride(from: 0, through: 400, by: 40){
+    for y in stride(from: 0, through: 600, by: 45){
+        canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+    }
+}
+
+//draw coverup 
+canvas.drawShapesWithBorders = false
+canvas.drawRectangle(centreX: 200, centreY: 525, width: 400, height: 150)
+
+//draw white circle pattern 
+canvas.fillColor = Color.white
+
+for value in stride(from: 405, through: 45, by: -45){
+    
+}
+
+
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

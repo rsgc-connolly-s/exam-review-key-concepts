@@ -12,8 +12,6 @@ import PlaygroundSupport
  */
 var sum = 0
 for value in 1...4 {
-    sum
-    value
     sum = sum + value
 }
 sum         // equals 10 at this point

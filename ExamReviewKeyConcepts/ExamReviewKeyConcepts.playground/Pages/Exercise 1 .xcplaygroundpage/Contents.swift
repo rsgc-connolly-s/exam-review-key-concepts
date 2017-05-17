@@ -23,7 +23,13 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+//Create Background
+canvas.fillColor = Color.init(hue: 190, saturation: 90, brightness: 90, alpha: 100)
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 
+//Make blur effect 
+
+for x in stride(from: <#T##T#>, through: <#T##T#>, by: <#T##T.Stride#>)
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView

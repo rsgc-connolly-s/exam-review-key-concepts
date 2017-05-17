@@ -45,7 +45,7 @@ for x in stride(from: 0, through: 400, by: 40){
 
 //draw coverup 
 canvas.drawShapesWithBorders = false
-canvas.drawRectangle(centreX: 200, centreY: 475, width: 400, height: 200)
+canvas.drawRectangle(centreX: 200, centreY: 500, width: 400, height: 200)
 
 //draw white circle pattern 
 canvas.fillColor = Color.white
@@ -55,6 +55,28 @@ for value in stride(from: 405, through: 45, by: -45){
 }
 
 
+//Draw Title
+canvas.textColor = Color.black
+canvas.drawText(message: "pixies", size: 60, x: 25, y: 410)
+
+//left info
+canvas.drawText(message: "saturday", size: 10, x: 15, y: 550)
+canvas.drawText(message: "december 13 1986", size: 10, x: 15, y: 535)
+canvas.drawText(message: "9 pm over 21", size: 10, x: 15, y: 520)
+
+//right info
+canvas.drawText(message: "at the rat", size: 10, x: 300, y: 550)
+canvas.drawText(message: "528 commonwealth", size: 10, x: 300, y: 535)
+canvas.drawText(message: "boston, mass.", size: 10, x: 300, y: 520)
+
+
+//bottom rigth info
+canvas.textColor = Color.white
+canvas.drawText(message: "with", size: 13, x: 290, y: 450)
+canvas.drawText(message: "throwing muses", size: 13, x: 290, y: 435)
+canvas.drawText(message: "big dipper.", size: 13, x: 290, y: 420)
+//: ## Template code
+//: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.

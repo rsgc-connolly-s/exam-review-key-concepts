@@ -31,7 +31,7 @@ canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 //Set Paramaters 
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = false
-canvas.defaultBorderWidth = 10
+canvas.defaultBorderWidth = 13
 
 //Make square function
 func drawSquarePattern(centreX: Int, centreY: Int){

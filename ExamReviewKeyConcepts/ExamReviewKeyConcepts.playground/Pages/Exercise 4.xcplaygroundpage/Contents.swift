@@ -30,14 +30,22 @@ canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
 //draw circles pattern
 canvas.fillColor = Color.green
 for x in stride(from: 0, through: 400, by: 40){
-    for y in stride(from: 0, through: 600, by: 45){
+    for y in stride(from: 0, through: 400, by: 40){
+        canvas.fillColor = Color.green
         canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+        
+        //change points to white
+        if x + y <= 400 && x != 0 && y != 0 {
+            canvas.fillColor = Color.white
+            canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+            
+        }
     }
 }
 
 //draw coverup 
 canvas.drawShapesWithBorders = false
-canvas.drawRectangle(centreX: 200, centreY: 525, width: 400, height: 150)
+canvas.drawRectangle(centreX: 200, centreY: 475, width: 400, height: 200)
 
 //draw white circle pattern 
 canvas.fillColor = Color.white
